@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "ciao"
+echo "cia"

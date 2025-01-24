@@ -3,8 +3,15 @@
 numeri=(2 4 7 16 21)
 
 somma=$((numeri[0] + numeri[1] + numeri[2] + numeri[3] + numeri[4]))
-
 media=$(echo "$somma / ${#numeri[@]}" | bc)
 
+echo "La somma dell'array è: $somma"
+echo "La media dell'array è: $media"
+
+unset "numeri[0]"
+unset "numeri[4]"
+
+somma=$((numeri[0] + numeri[1] + numeri[2] + numeri[3] + numeri[4]))
+media=$(echo "$somma / ${#numeri[@]}" | bc)
 echo "La somma dell'array è: $somma"
 echo "La media dell'array è: $media"
