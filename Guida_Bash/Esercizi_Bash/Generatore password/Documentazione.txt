@@ -1,0 +1,12 @@
+Per generare delle Password relativamente complesse e randomiche utilizzeremo varie tecniche:
+
+1. RANDOM genera numeri randomici interi da 0 a 32767.
+
+2. Con il comando: date +%s la Password2 sarà formata dai secondi trascorsi dall’epoch.
+
+3. (date +%s+%N | sha256sum | head -c10): utilizzando questo comando, i passaggi per ottenere l’output saranno questi:
+   • date +%s+%N: otteniamo i secondi (s) e nanosecondi (N) trascorsi dal epoch, per esempio 1709180882+123456789.
+   •attraverso la pipeline passiamo l’output precedente ( date) al comando successivo.
+   •Con il comando sha256sum otteniamo il checksum, ovvero una stringa da 64 caratteri esadecimali, del comando date.
+   •Attraverso la pipeline passiamo l’output precedente ( sha256sum) al comando successivo.
+   •Infine tramite head -c10 prendiamo solo i primi 10 caratteri della stringa, creata dal sha256sum.
