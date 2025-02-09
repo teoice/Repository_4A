@@ -11,3 +11,5 @@ echo "b = " "${b}"
 read -r -p "Lettura di c, nascondendo l'input dal terminale" -s c
 echo ""
 echo "c = " "${c}"
+
+read -p "Lettura di d, con stampa annessa " a && echo "$a"
