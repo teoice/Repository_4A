@@ -1,0 +1,38 @@
+Esercizio con diversi tipi di cicli.
+
+1: Cicli while
+1.1 - Ciclo while con condizione logica.
+Ho inizializzato una variabile "a" con valore 10, e succesivamente tramite il ciclo while ho incrementato il suo valore di 1,
+controllando prima, con un if, se fosse equivalente a 10.
+
+1.2 - Ciclo while con condizione di comando
+Il codice assegna 10 alla variabile a e avvia un ciclo while che continua finché grep trova almeno un numero diverso da 0 in a. 
+Il comando echo $a | grep -q '[^0]' verifica questo: grep -q cerca caratteri che non siano "0" e, se li trova, il ciclo prosegue.
+Tramite l'opzione -q, "a" non viene stampata ad ogni interazione.
+Ad ogni iterazione, a viene decrementato di 1, fino a quando "a" diventa 0, grep non trova più cifre diverse da zero, 
+il ciclo si interrompe e viene stampato il messaggio finale.
+
+2: Cicli Until
+2.1 - Ciclo Until
+Il codice utilizza un ciclo until, che continua a eseguire il blocco finché la condizione [ $test = false ] diventa vera. 
+Inizialmente, test è impostato su true, quindi il ciclo parte. Ad ogni iterazione, viene chiesto all'utente di inserire un numero. 
+Se il numero è negativo, test diventa false e il ciclo si interrompe. 
+Se il numero è positivo, viene sommato alla variabile sum. 
+Alla fine, viene stampata la somma totale dei numeri inseriti.
+
+2.2 - Ciclo Until con break
+Il codice avvia un ciclo until false, che crea un ciclo infinito perché la condizione è sempre falsa. 
+Ad ogni iterazione, l'utente inserisce un numero. Se il numero è negativo, il comando break interrompe immediatamente il ciclo. 
+Altrimenti, il numero viene aggiunto alla variabile sum. Alla fine, viene stampata la somma totale dei numeri inseriti.
+
+3: Cicli for
+3.1 - Ciclo for con elenco di variabili
+In questo caso la variabile "file" viene assegnata a diversi percorsi (/home, /etc/passwd, /root/fic.txt),
+e attraverso il comando file, visualizziamo la tipologia di file di ogni percorso assegnato.       
+Quindi /home sarà una directory e fic.txt un ASCII text.
+
+3.2 - Cicli for con range di variabili
+Questo cicli for si differenzia dal precedente per la modalità con cui andiamo ad assegnare le variabili. Nel primo caso era un semplice elenco,
+mentre in questo caso definiamo, tramite le parentesti graffe{}, un range di valori; il primo e secondo valore, distanziati da due punti (..),
+definiscono appunto il minimo e massimo del range, e il terzo valore, distanziato anch'esso da due punti(..), indica lo step,
+ovvero di quanto viene aumentato il valore ad ogni interazione.
