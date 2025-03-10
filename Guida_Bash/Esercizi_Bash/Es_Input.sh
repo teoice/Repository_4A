@@ -12,4 +12,4 @@ read -r -p "Lettura di c, nascondendo l'input dal terminale" -s c
 echo ""
 echo "c = " "${c}"
 
-echo (read -p "Lettura di d" d 
+echo read -p "Lettura di d" d 
