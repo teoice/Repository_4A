@@ -39,9 +39,10 @@ while true; do      #Tramite l'uso del ciclo interrativo "while", è possibile u
 
     echo "Vuoi fare un'altra operazione? [y/n]"         #Uso del "if" per uscire dal programma
     read risposta
-    if [[ $risposta -eq n ]]; then 
+    if [[ $risposta == 'n' ]]; then 
         echo "Uscita dal programma."
         break
+        
     fi
 
 done
